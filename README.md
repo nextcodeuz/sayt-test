@@ -1,65 +1,22 @@
-# 🚀 k6 + Grafana bilan saytni kuchli test qilish
+# 🚀 NextCodeUz sayt-test: k6 + Grafana qo‘llanmasi
 
-Agar siz **o‘zingizga tegishli sayt** yoki ruxsat berilgan loyiha ustida ishlayotgan bo‘lsangiz, **k6** va **Grafana** — saytning chidamliligini tekshirish uchun juda qulay kombinatsiya.  
-Bu usul orqali siz server nechta so‘rovni ko‘tara olishini, qaysi joyda sekinlashishini va qayerda bottleneck borligini ko‘rishingiz mumkin. ⚙️
+**NextCodeUz sayt-test** — bu o‘zingizga tegishli yoki ruxsat berilgan saytni yuklama ostida tekshirish uchun ishlatiladigan loyiha.  
+Bu loyiha orqali siz sayt tezligi, javob vaqti, xatoliklar soni va umumiy barqarorlikni kuzatishingiz mumkin. k6 skriptlari JavaScript’da yoziladi, natijalar esa Grafana orqali chiroyli monitoring ko‘rinishida tahlil qilinadi.
 
----
+## 📦 Repo tarkibi
 
-## 🔥 k6 nima?
+Bu repoda quyidagi asosiy fayllar bor:
 
-**k6** — bu modern load testing tool.  
-U orqali siz:
+- `nextcodeuz.js` — asosiy k6 test skripti  
+- `windows.sh` — Windows uchun o‘rnatish/ishga tushirish skripti  
+- `linux_mac.sh` — Linux va macOS uchun skript  
+- `termux.sh` — Termux uchun skript  
+- `README.md` — loyiha tavsifi
 
-- bir vaqtning o‘zida ko‘p foydalanuvchi yuborasiz 👥
-- response time ni o‘lchaysiz ⏱️
-- xatolarni kuzatasiz ❌
-- server yuk ostida qanday ishlashini bilasiz 📊
+## 🛠 O‘rnatish
 
-k6 skriptlari **PHP emas**, balki **JavaScript** ko‘rinishida yoziladi.
+Repo’ni yuklab oling:
 
----
-
-## 📈 Grafana nima?
-
-**Grafana** — bu monitoring va dashboard platformasi.  
-k6 dan kelgan natijalarni Grafana’da chiroyli grafiklar ko‘rinishida ko‘rish mumkin.
-
-Siz quyidagilarni kuzatasiz:
-
-- request soni
-- response time
-- error rate
-- virtual user soni
-- server yuklanishi
-
----
-
-## 🛠 Nima uchun kerak?
-
-Bu test sizga yordam beradi:
-
-- sayt qachon sekinlashishini bilish uchun
-- server kuchini baholash uchun
-- cache kerakmi yo‘qmi aniqlash uchun
-- API endpointlarni tekshirish uchun
-- real foydalanuvchi bosimini simulyatsiya qilish uchun
-
----
-
-## ✅ Oddiy k6 test skript
-
-Quyidagi skript xavfsiz va oddiy test uchun:
-
-```javascript
-import http from 'k6/http';
-import { sleep } from 'k6';
-
-export const options = {
-  vus: 5,
-  duration: '30s',
-};
-
-export default function () {
-  http.get('http://localhost/');
-  sleep(1);
-}
+```bash
+git clone https://github.com/nextcodeuz/sayt-test.git
+cd sayt-test
