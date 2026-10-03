@@ -2,6 +2,7 @@
 
 **NextCodeUz sayt-test** — bu o‘zingizga tegishli yoki ruxsat berilgan saytni yuklama ostida tekshirish uchun ishlatiladigan loyiha.  
 Bu loyiha orqali siz sayt tezligi, javob vaqti, xatoliklar soni va umumiy barqarorlikni kuzatishingiz mumkin. k6 skriptlari JavaScript’da yoziladi, natijalar esa Grafana orqali chiroyli monitoring ko‘rinishida tahlil qilinadi.
+bu loyihamiz orqali qilgan ishingiz uchun biz (muallif) javobgar emas.
 
 ## 📦 Repo tarkibi
 
